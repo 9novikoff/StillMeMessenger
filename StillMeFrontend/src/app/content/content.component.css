@@ -1,0 +1,28 @@
+.message_content{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100%;
+    width: 80%;
+    margin-left:20%;
+    padding:0px 16px;
+    position: absolute;
+    background-color: #292d33;
+}
+
+.message_content::-webkit-scrollbar,
+.message-input::-webkit-scrollbar{
+    display: none;
+}
+
+.message-input {
+    color: white;
+    height: 5%;
+    width: 80%;
+    position: absolute;
+    margin-left: 20%;
+    background-color: #1a1d24;
+    bottom: 0;
+    overflow-y: scroll;
+    resize: none;
+}
+

@@ -1,0 +1,19 @@
+.welcome-content{
+    display: flex;
+    background-color: #0a131f;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.logo{
+    width: 45%;
+    object-fit: cover;
+}
+
+.name{
+    margin-top: 20%;
+    font-family: "Verdana","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size: xx-large;
+    color: white;
+}

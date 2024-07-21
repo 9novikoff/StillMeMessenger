@@ -1,0 +1,28 @@
+li {
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 4px 4px;
+    display: flex;
+  }
+
+  li div {
+    text-decoration: none;
+  }
+  
+  li:hover {
+    background-color: #555;
+    color: white;
+  }
+
+  .content{
+    padding-left: 4px;
+  }
+
+  .name{
+    color: white;
+    font-size: large;
+  }
+
+  .message{
+    color: #CCCCCC;
+  }

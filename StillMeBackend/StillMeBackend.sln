@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StillMeBackend.MessengerAPI", "StillMeBackend.MessengerAPI\StillMeBackend.MessengerAPI.csproj", "{823161B1-A628-4587-B474-8E381F50D54B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StillMeGateway", "StillMeGateway\StillMeGateway.csproj", "{269B3F11-E621-4013-9FCC-D87CD23DE586}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{823161B1-A628-4587-B474-8E381F50D54B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{823161B1-A628-4587-B474-8E381F50D54B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{823161B1-A628-4587-B474-8E381F50D54B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{823161B1-A628-4587-B474-8E381F50D54B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{269B3F11-E621-4013-9FCC-D87CD23DE586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{269B3F11-E621-4013-9FCC-D87CD23DE586}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{269B3F11-E621-4013-9FCC-D87CD23DE586}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{269B3F11-E621-4013-9FCC-D87CD23DE586}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
