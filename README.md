@@ -1,6 +1,8 @@
 Simplified use case diagram:
-![image](https://github.com/user-attachments/assets/b76a1d64-7c1d-43a0-88d6-c4fe9206f199)
+![image](https://github.com/user-attachments/assets/6e8220e7-f990-4486-bf91-f19d459a133c)
+
 
 Relational messenger database scheme:
-![image](https://github.com/user-attachments/assets/a7c939a6-ed43-4814-8675-cc83765dc972)
+![image](https://github.com/user-attachments/assets/9e59a6a0-6b91-4f74-89b4-584ef98b28a9)
+
 
