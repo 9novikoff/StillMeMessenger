@@ -1,13 +1,22 @@
 ﻿using AutoMapper;
+using MessagingContracts;
 using StillMeBackend.MessengerAPI.DAL;
 using StillMeBackend.MessengerAPI.DAL.Repositories;
-using StillMeBackend.MessengerAPI.DTO;
 
 namespace StillMeBackend.MessengerAPI.Services;
 
-public class MessageService: ServiceBase<Message, MessageDto>
+public class MessageService: ServiceBase<Message, MessageBase>
 {
-    public MessageService(IRepository<Message> repository, IMapper mapper) : base(repository, mapper)
+    protected override MessageRepository _repository { get; }
+    public MessageService(MessageRepository repository, IMapper mapper) : base(mapper)
     {
+        _repository = repository;
+    }
+
+    public IEnumerable<MessageBase> GetMessagePageForUserId(string UserId, int pageNumber, int pageSize)
+    {
+        var messages = _repository.GetAll();
+
+        return _mapper.Map<IEnumerable<MessageBase>>(messages.Where(m => m.UserId == UserId).Skip((pageNumber - 1) * pageSize).Take(pageSize));
     }
 }

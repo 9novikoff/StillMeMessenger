@@ -1,13 +1,21 @@
 ﻿using AutoMapper;
+using MessagingContracts;
 using StillMeBackend.MessengerAPI.DAL;
 using StillMeBackend.MessengerAPI.DAL.Repositories;
-using StillMeBackend.MessengerAPI.DTO;
 
 namespace StillMeBackend.MessengerAPI.Services;
 
-public class ChatService: ServiceBase<Chat, ChatDto>
+public class ChatService: ServiceBase<Chat, ChatBase>
 {
-    public ChatService(IRepository<Chat> repository, IMapper mapper) : base(repository, mapper)
+    protected override ChatRepository _repository { get; }
+    public ChatService(ChatRepository repository, IMapper mapper) : base(mapper)
     {
+        _repository = repository;
     }
+    
+    public IEnumerable<ChatBase> GetChatsByUserId(string id)
+    {
+        return _mapper.Map<IEnumerable<ChatBase>>(_repository.GetChatsByUserId(id));
+    }
+    
 }

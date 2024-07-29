@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StillMeBackend.MessengerAPI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StillMeGateway", "StillMeGateway\StillMeGateway.csproj", "{269B3F11-E621-4013-9FCC-D87CD23DE586}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessagingContracts", "MessagingContracts\MessagingContracts.csproj", "{7D96C5FB-D0CF-46FE-9DA8-A2998DD30305}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{269B3F11-E621-4013-9FCC-D87CD23DE586}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{269B3F11-E621-4013-9FCC-D87CD23DE586}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{269B3F11-E621-4013-9FCC-D87CD23DE586}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D96C5FB-D0CF-46FE-9DA8-A2998DD30305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D96C5FB-D0CF-46FE-9DA8-A2998DD30305}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D96C5FB-D0CF-46FE-9DA8-A2998DD30305}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D96C5FB-D0CF-46FE-9DA8-A2998DD30305}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

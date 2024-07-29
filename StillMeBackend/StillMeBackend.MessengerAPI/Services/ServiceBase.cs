@@ -3,14 +3,13 @@ using StillMeBackend.MessengerAPI.DAL.Repositories;
 
 namespace StillMeBackend.MessengerAPI.Services;
 
-public class ServiceBase<T, TDto> : IService<TDto> where T : class
+public abstract class ServiceBase<T, TDto> : IService<TDto> where T : class
 {
-    protected readonly IRepository<T> _repository;
+    protected abstract IRepository<T> _repository { get;}
     protected readonly IMapper _mapper;
 
-    public ServiceBase(IRepository<T> repository, IMapper mapper)
+    public ServiceBase(IMapper mapper)
     {
-        _repository = repository;
         _mapper = mapper;
     }
     
@@ -29,6 +28,10 @@ public class ServiceBase<T, TDto> : IService<TDto> where T : class
 
     public async Task<ServiceResult<TDto>> GetByIdAsync(object id)
     {
+        var isValid = await ValidateId(id);
+        if (!isValid)
+            return "No records with such id";
+        
         var entity = await _repository.GetByIdAsync(id);
         return _mapper.Map<TDto>(entity);
     }

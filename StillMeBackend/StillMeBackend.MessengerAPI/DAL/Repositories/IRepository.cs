@@ -2,7 +2,7 @@
 
 public interface IRepository<T> : IDisposable where T : class
 {
-    IEnumerable<T> GetAll();
+    IQueryable<T> GetAll();
     Task<T> GetByIdAsync(object id);
     Task AddAsync(T obj);
     Task Update(object id, T obj);

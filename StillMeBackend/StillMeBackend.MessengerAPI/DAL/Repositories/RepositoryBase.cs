@@ -4,7 +4,7 @@ namespace StillMeBackend.MessengerAPI.DAL.Repositories;
 
 public abstract class RepositoryBase<T> : IRepository<T> where T : class
 {
-    private readonly DbContext _context;
+    protected readonly DbContext _context;
     private readonly DbSet<T> _table;
     private bool _disposed = false;
     
@@ -14,9 +14,9 @@ public abstract class RepositoryBase<T> : IRepository<T> where T : class
         _table = _context.Set<T>();
     }
     
-    public IEnumerable<T> GetAll()
+    public IQueryable<T> GetAll()
     {
-        return _table.ToList();
+        return _table.Select(x => x);
     }
     
     public async Task<T> GetByIdAsync(object id)

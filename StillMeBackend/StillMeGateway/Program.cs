@@ -1,3 +1,5 @@
+using MassTransit;
+using MessagingContracts.ChatMessaging;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -39,9 +41,23 @@ public class Program
             });
         });
 
+        builder.Services.AddAutoMapper(typeof(MappingProfile));
+
+        builder.Services.AddMassTransit(x =>
+        {
+            x.UsingRabbitMq((context, cfg) =>
+            {
+                cfg.Host("localhost", "/", h =>
+                {
+                    h.Username("guest");
+                    h.Password("guest");
+                });
+            });
+        });
+        
         builder.Services.AddAuthentication().AddBearerToken(IdentityConstants.BearerScheme);
 
-        builder.Services.AddAuthorizationBuilder();
+        builder.Services.AddAuthorization();
 
         builder.Services.AddDbContext<IdentityDbContext>(options => 
             options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -63,6 +79,9 @@ public class Program
         app.UseHttpsRedirection();
         
         app.MapIdentityApi<User>();
+
+        app.UseAuthentication();
+        app.UseAuthorization();
 
         app.MapControllers();
         

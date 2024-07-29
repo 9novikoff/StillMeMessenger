@@ -8,10 +8,10 @@ public class ServiceResult<T>
 
     public static implicit operator ServiceResult<T>(T value) =>
         new ServiceResult<T>() { Value = value, IsValid = true };
-    
+
     public static implicit operator ServiceResult<T>(string errorMessage) =>
         new ServiceResult<T>() { ErrorMessage = errorMessage, IsValid = false };
-    
+
     public static implicit operator ServiceResult<T>(bool value) =>
         new ServiceResult<T>() { IsValid = value };
 
