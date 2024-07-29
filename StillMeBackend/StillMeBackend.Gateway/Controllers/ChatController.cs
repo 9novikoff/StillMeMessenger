@@ -4,7 +4,7 @@ using MessagingContracts.ChatMessaging;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace StillMeGateway.Controllers;
+namespace StillMeBackend.Gateway.Controllers;
 
 [ApiController]
 [Route("chat")]

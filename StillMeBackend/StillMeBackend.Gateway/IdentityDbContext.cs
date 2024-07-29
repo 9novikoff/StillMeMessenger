@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace StillMeGateway;
+namespace StillMeBackend.Gateway;
 
 public class IdentityDbContext: IdentityDbContext<User>
 {

@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using MessagingContracts.MessageContracts;
-using StillMeGateway.DTO;
+using StillMeBackend.Gateway.DTO;
 
-namespace StillMeGateway;
+namespace StillMeBackend.Gateway;
 
 public class MappingProfile : Profile
 {

@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StillMeBackend.MessengerAPI", "StillMeBackend.MessengerAPI\StillMeBackend.MessengerAPI.csproj", "{823161B1-A628-4587-B474-8E381F50D54B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StillMeGateway", "StillMeGateway\StillMeGateway.csproj", "{269B3F11-E621-4013-9FCC-D87CD23DE586}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StillMeBackend.Gateway", "StillMeBackend.Gateway\StillMeBackend.Gateway.csproj", "{269B3F11-E621-4013-9FCC-D87CD23DE586}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessagingContracts", "MessagingContracts\MessagingContracts.csproj", "{7D96C5FB-D0CF-46FE-9DA8-A2998DD30305}"
 EndProject

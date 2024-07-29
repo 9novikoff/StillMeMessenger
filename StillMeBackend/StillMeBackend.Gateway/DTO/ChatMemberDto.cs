@@ -1,4 +1,4 @@
-﻿namespace StillMeGateway.DTO;
+﻿namespace StillMeBackend.Gateway.DTO;
 
 public class ChatMemberDto
 {

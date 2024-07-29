@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
-namespace StillMeGateway;
+namespace StillMeBackend.Gateway;
 
 public class Program
 {

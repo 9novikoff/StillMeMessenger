@@ -3,9 +3,9 @@ using MassTransit;
 using MessagingContracts.MessageContracts;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using StillMeGateway.DTO;
+using StillMeBackend.Gateway.DTO;
 
-namespace StillMeGateway.Controllers;
+namespace StillMeBackend.Gateway.Controllers;
 
 [ApiController]
 [Route("messages")]

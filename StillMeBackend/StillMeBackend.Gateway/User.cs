@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace StillMeGateway;
+namespace StillMeBackend.Gateway;
 
 public class User : IdentityUser
 {
