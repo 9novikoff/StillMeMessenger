@@ -10,5 +10,6 @@ public class MappingProfile : Profile
     {
         CreateMap<MessageDto, MessageCreate>();
         CreateMap<MessageResponse, MessageDto>();
+        CreateMap<User, UserViewDto>();
     }
 }

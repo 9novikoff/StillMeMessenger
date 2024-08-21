@@ -1,3 +1,4 @@
+using AutoMapper;
 using MassTransit;
 using MessagingContracts.ChatMessaging;
 using Microsoft.AspNetCore.Identity;
@@ -40,9 +41,7 @@ public class Program
                 }
             });
         });
-
-        builder.Services.AddAutoMapper(typeof(MappingProfile));
-
+        
         builder.Services.AddMassTransit(x =>
         {
             x.UsingRabbitMq((context, cfg) =>
@@ -61,6 +60,10 @@ public class Program
 
         builder.Services.AddDbContext<IdentityDbContext>(options => 
             options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+        builder.Services.AddAutoMapper(typeof(MappingProfile));
+        builder.Services.AddScoped(s => new UserRepository(s.GetRequiredService<IdentityDbContext>()));
+        builder.Services.AddScoped(s =>
+            new UserService(s.GetRequiredService<UserRepository>(), s.GetRequiredService<IMapper>()));
 
         builder.Services.AddIdentityCore<User>()
             .AddEntityFrameworkStores<IdentityDbContext>()
