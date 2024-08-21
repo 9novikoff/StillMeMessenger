@@ -7,8 +7,8 @@ namespace StillMeBackend.MessengerAPI.Consumers;
 
 public class ChatListGetConsumer : IConsumer<ChatListGet>
 {
-    private ChatService _service;
-    private IMapper _mapper;
+    private readonly ChatService _service;
+    private readonly IMapper _mapper;
 
     public ChatListGetConsumer(ChatService service, IMapper mapper)
     {

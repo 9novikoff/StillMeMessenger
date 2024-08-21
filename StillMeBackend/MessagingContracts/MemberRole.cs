@@ -2,7 +2,7 @@
 
 public enum MemberRole
 {
+    Member,
     Creator,
-    Admin,
-    Member
+    Admin
 }
